@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# Ce script remplace le fichier /etc/hosts pour que localhost pointe vers 127.0.0.2
-# Crée un nouveau fichier hosts avec la ligne modifiée
-echo "127.0.0.2	localhost" > ~/hosts.new
-# Remplace le fichier /etc/hosts avec la nouvelle version (nécessite les droits root)
-sudo cp -f ~/hosts.new /etc/hosts
+# Copie le fichier /etc/hosts dans le répertoire personnel sous le nom hosts.new
+echo "127.0.0.2    localhost" >> /etc/hosts
+echo "8.8.8.8      facebook.com" >> /etc/hosts
