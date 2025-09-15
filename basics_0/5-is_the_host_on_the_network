@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Structure conditionnelle pour vérifier les arguments
+if [ $# -eq 0 ] # Si le nombre d'arguments ($#) est égal à 0
+# Variable spéciale qui contient le nombre total d'arguments passés au script
+then
+    # Aucun argument fourni : afficher le message d'usage
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+else
+    # Un argument a été fourni : exécuter le ping
+    # $1 représente le premier argument (l'adresse IP)
+    # -c 5 signifie "envoyer 5 paquets ping"
+    ping -c 5 "$1"
+fi # Fin de la structure conditionnelle
