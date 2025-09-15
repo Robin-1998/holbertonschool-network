@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Copie le fichier /etc/hosts dans le répertoire personnel sous le nom hosts.new
+cp /etc/hosts ~/hosts.new
+echo "127.0.0.2		localhost" > ~/hosts.new
+# Écrit une nouvelle ligne dans hosts.new (écrase le contenu existant)
+echo "8.8.8.8		facebook.com" >> ~/hosts.new
+# Ajoute une ligne à hosts.new sans écraser le contenu précédent
+cp -f ~/hosts.new /etc/hosts
+# Remplace le fichier /etc/hosts avec hosts.new (forcé, sans confirmation)
