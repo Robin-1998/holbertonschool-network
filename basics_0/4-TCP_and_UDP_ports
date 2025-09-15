@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
+# -l permet de lister les sockets + -t pour le TCP + -n pour le nombre et -p affiche le PID avec le programme
 ss -lt
 ss -ltnp
-# -l permet de lister les sockets + -t pour le TCP + -n pour le nombre et -p affiche le PID avec le programme
