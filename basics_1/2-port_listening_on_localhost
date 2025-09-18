@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # Script qui lit sur le port via localhost
 nc -l 98
+bonjour
